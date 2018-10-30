@@ -1,0 +1,3 @@
+[submodule "openresty-docker/lua-resty-openidc"]
+	path = openresty-docker/lua-resty-openidc
+	url = git@github.com:XA21X/lua-resty-openidc.git

@@ -1,0 +1,35 @@
+worker_processes 1;
+
+#error_log logs/error.log;
+#error_log logs/error.log  notice;
+#error_log logs/error.log  info;
+
+error_log /dev/stderr;
+#error_log /dev/stdout debug;
+
+events {
+  worker_connections 1024;
+}
+
+http {
+  include mime.types;
+  default_type application/octet-stream;
+
+  access_log /dev/stdout;
+
+  lua_package_path "$prefix/lua/?.lua;;";
+
+  lua_ssl_trusted_certificate /etc/ssl/certs/ca-certificates.crt;
+  lua_ssl_verify_depth 5;
+
+  lua_shared_dict discovery 1m;
+  lua_shared_dict jwks 1m;
+
+  resolver $NAMESERVER ipv6=off;
+
+  map $nginx_version $session_secret {
+    default "$SESSION_SECRET";
+  }
+
+  include default.conf;
+}
