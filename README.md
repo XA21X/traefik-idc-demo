@@ -4,7 +4,9 @@
 
 **NOTE**: This repository contains a submodule pointing to [my fork of lua-resty-openidc](https://github.com/XA21X/lua-resty-openidc). Please run `git submodule update --init --recursive` after cloning the repository OR use the `--recurse-submodules` flag when cloning. 
 
-In its current state, the provided compose files are for reference only, taking into account a more complicated setup specific to my server (that is also hosting the demo), and therefore will not work anywhere else without modification.
+In its current state, the provided [compose files](#compose-files) are for reference only, taking into account a more complicated setup specific to my server that is also hosting the demo, and therefore will not work anywhere else without modification.
+
+The [auth.lua](openresty-docker/lua/traefik-idc/auth.lua) script was written to slightly modularise the added authentication bypass functionality (WIP; disabled with [examples](https://github.com/XA21X/traefik-idc-demo/blob/a2b65c39831e2aa1e7773d3e9132c6214c92ded3/openresty-docker/lua/traefik-idc/auth.lua#L60-L66)) where the forward auth server can skip the OIDC authentication based on the client IP and requested domain. Alternatively, the configuration can be inserted directly into [default.conf](openresty-docker/conf/default.conf) as per the [official instructions](https://github.com/zmartzone/lua-resty-openidc#sample-configuration-for-google-signin), with careful adaptation of the [HTTP status codes handling](https://github.com/XA21X/traefik-idc-demo/blob/a2b65c39831e2aa1e7773d3e9132c6214c92ded3/openresty-docker/lua/traefik-idc/auth.lua#L71-L87) required for forward auth servers.
 
 ## Compose files
 
