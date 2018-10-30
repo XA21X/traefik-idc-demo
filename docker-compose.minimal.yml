@@ -1,0 +1,22 @@
+version: '2'
+
+services:
+  nginx:
+    image: nginx:1.15.5-alpine
+    volumes:
+      - ./nginx-root:/usr/share/nginx/html:ro
+    networks:
+      - traefik
+    labels:
+      traefik.docker.network: lokinet_traefik
+      traefik.enable: true
+      traefik.frontend.auth.forward.address: http://openresty/
+      traefik.frontend.headers.customResponseHeaders: Cache-Control:no-store,must-revalidate
+      traefik.frontend.rule: Host:traefik-idc-demo.loki.xlipse.net
+      traefik.port: 80
+      traefik.tags: production
+
+networks:
+  traefik:
+    external:
+      name: lokinet_traefik
