@@ -1,3 +1,3 @@
 # traefik-idc-demo
 
-See https://github.com/containous/traefik/issues/593#issuecomment-420306250
+[Background](https://github.com/containous/traefik/issues/593#issuecomment-420306250) • [Demo](http://traefik-idc-demo.loki.xlipse.net/)
