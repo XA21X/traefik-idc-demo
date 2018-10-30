@@ -1,6 +1,6 @@
 # traefik-idc-demo
 
-[Background](https://github.com/containous/traefik/issues/593#issuecomment-420306250) • [Demo](http://traefik-idc-demo.loki.xlipse.net/)                                                                                                                                                                                                               
+[Background](https://github.com/containous/traefik/issues/593#issuecomment-420306250) • [Demo](http://traefik-idc-demo.loki.xlipse.net/)                                                                                                                                                                                                             
 
 **NOTE**: This repository contains a submodule pointing to [my fork of lua-resty-openidc](https://github.com/XA21X/lua-resty-openidc). Please run `git submodule update --init --recursive` after cloning the repository OR use the `--recurse-submodules` flag when cloning. 
 
@@ -19,3 +19,7 @@ The [auth.lua](openresty-docker/lua/traefik-idc/auth.lua) script was written to 
 
 #### [docker-compose.minimal.yml](docker-compose.minimal.yml)
 * In production, both Traefik and the OpenResty auth server would likely be external. This provides an example of solely the configuration required for a protected service and is closest to what I have experimentally deployed.
+
+## Live demo
+
+Visit the [protected endpoint](http://traefik-idc-demo.loki.xlipse.net/) and login with `test:test`.
