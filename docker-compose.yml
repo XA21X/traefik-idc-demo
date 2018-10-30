@@ -7,7 +7,6 @@ services:
     env_file: ./secrets.env
     networks:
       - default
-      - traefik
 
   nginx:
     image: nginx:1.15.5-alpine
