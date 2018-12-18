@@ -2,7 +2,7 @@ version: '2'
 
 services:
   traefik:
-    image: traefik:v1.7.3-alpine
+    image: traefik:v1.7.6-alpine
     networks:
       default: {}
       traefik:
@@ -18,7 +18,7 @@ services:
     env_file: ./secrets.env
 
   nginx:
-    image: nginx:1.15.5-alpine
+    image: nginx:1.15.7-alpine
     volumes:
       - ./nginx-root:/usr/share/nginx/html:ro
     labels:

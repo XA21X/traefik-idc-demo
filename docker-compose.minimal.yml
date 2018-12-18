@@ -2,7 +2,7 @@ version: '2'
 
 services:
   nginx:
-    image: nginx:1.15.5-alpine
+    image: nginx:1.15.7-alpine
     volumes:
       - ./nginx-root:/usr/share/nginx/html:ro
     networks:

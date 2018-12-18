@@ -1,4 +1,4 @@
-FROM openresty/openresty:1.13.6.2-1-xenial
+FROM openresty/openresty:1.13.6.2-2-xenial
 
 # Install official copy to install dependencies
 RUN opm install zmartzone/lua-resty-openidc=1.7.0
