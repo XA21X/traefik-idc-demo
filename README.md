@@ -22,4 +22,4 @@ The [auth.lua](openresty-docker/lua/traefik-idc/auth.lua) script was written to 
 
 ## Live demo
 
-Visit the [protected endpoint](http://traefik-idc-demo.loki.xlipse.net/) and login with `test:test`.
+Visit the [protected endpoint](http://traefik-idc-demo.xlipse.net/) and login with `test:test`.
