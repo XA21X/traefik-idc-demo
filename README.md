@@ -1,6 +1,6 @@
 # traefik-idc-demo
 
-[Background](https://github.com/containous/traefik/issues/593#issuecomment-420306250) • [Demo](http://traefik-idc-demo.loki.xlipse.net/)                                                                                                                                                                                                             
+[Background](https://github.com/containous/traefik/issues/593#issuecomment-420306250) • [Demo](http://traefik-idc-demo.xlipse.net/)
 
 **NOTE**: This repository contains a submodule pointing to [my fork of lua-resty-openidc](https://github.com/XA21X/lua-resty-openidc). Please run `git submodule update --init --recursive` after cloning the repository OR use the `--recurse-submodules` flag when cloning. 
 
