@@ -4,7 +4,7 @@ local function authenticate_openidc()
 
   -- For more examples, visit: https://github.com/zmartzone/lua-resty-openidc
   local opts = {
-    redirect_uri = "https://traefik-idc-demo.loki.xlipse.net/redirect_uri",
+    redirect_uri_path = "/redirect_uri",
     discovery = "https://auth.xlipse.net/auth/realms/traefik-idc-demo/.well-known/openid-configuration",
     client_id = "traefik-idc-demo",
     client_secret = "717c73fc-3f94-4d63-84c4-289f1f3ee9fd",
